@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1, h2{
+  color: #24446b;
+}
+
+.title{
+  margin-top: 15px;
+}
+
+.showPosition{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+.localizacao{
+  display: flex;
+  flex-direction: row;
+  margin: 15px 0;
+}
+.localizacao > p{
+  background-color: #bec1c4;
+  color: #24446b;
+  border: 2px solid ;
+  border-radius: 50px;
+  padding: 5px 10px;
+  margin: 0px 10px;
+}
+
+.clima{
+  background-color: #24446b;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-radius: 20px;
+}
+
+.leftGroup{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  background-color: #77a5d2a2;
+  height: 270px;
+  border-radius: 10px;
+  padding: 20px;
+}
+.pClima{
+  font-size: 90px;
+  padding: 0 0;
+  color: white;
+}
+.degressCelsius{
+  margin-top: 20px;
+  margin-left: 5px;
+}
+.iconeClima{
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  margin: 0 auto;
+}
+
+.rightGroup{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10%;
+}
+.ulClima{
+  width: 100%;
+  border-radius: 10px;
+  list-style-type: none;
+}
+.liClima{
+  border: 2px solid #24446b;
+  border-radius: 5px;
+  background-color: #f4cc94;
+}
+.p0, .p1, .p2, .p3{
+  color: #24446b;
+  margin: 20px;
+  font-size: 22px;
+  font-weight: 500;
+}
