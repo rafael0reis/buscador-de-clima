@@ -9,16 +9,31 @@
 </head>
 <body>
   <h1 class="title">EasyWeather</h1>
+
+  <div class="localizacao">
+    <p class="latitudeP">Latitude:</p>
+    <p class="longitudeP">Longitude:</p>
+  </div>
+
   <div class="principal">
+
     <div class="showPosition">
+
       <h2>Localização</h2>
-      <div class="localizacao">
-        <p class="latitudeP">Latitude:</p>
-        <p class="longitudeP">Longitude:</p>
+
+      <div id="getLocal" class="pegarLocal">
+        <label class="labelLocal">
+          Digite uma localização:
+          <input id="localInput" class="inputLocal" type="text" placeholder="ex: cidade, estado, país">
+        </label>
+        <button class="botaoLocal" id="localButton">Enviar</button>
+        <button class="close" id="closeLocalButton">Posição Atual</button>
       </div>
+
     </div>
 
     <div class="clima" id="clima"></div>
+
   </div>
 </body>
 </html>

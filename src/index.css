@@ -19,6 +19,32 @@ h1, h2{
   margin-top: 15px;
 }
 
+.pegarLocal{
+  margin: 15px 0;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.inputLocal{
+  margin: 0 8px;
+  padding: 4px;
+  border-radius: 4px;
+  width: 200px;
+}
+.botaoLocal, .close{
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  background-color: #24446b;
+  color: white;
+  cursor: pointer;
+}
+.botaoLocal{
+  margin-right: 8px;
+}
+
 .showPosition{
   display: flex;
   flex-direction: column;
@@ -41,7 +67,7 @@ h1, h2{
 
 .clima{
   background-color: #24446b;
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;

@@ -1,43 +1,42 @@
 import { getPosition } from "../localization/localization.js"
-import { API_KEY } from './parameters.js'
+import { API_KEY_OW } from './parameters.js'
 
 
   //resultPosition = rP
-function getCurrentWeather(){
-  return getPosition().then(rP => {
+function getCurrentWeather(inputResObj/*posição escolhida do usuário*/){
+  
+  return getPosition(inputResObj).then(rP => {
+    const trueResultLat = rP.latitude ?? rP.userLat
+    const trueResultLng = rP.longitude ?? rP.userLng
 
-    return fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${rP.latitude.toFixed(2)}&lon=${rP.longitude.toFixed(2)}&units=metric&lang=pt_br&appid=${API_KEY}`)
+    return fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${trueResultLat}&lon=${trueResultLng}&units=metric&lang=pt_br&appid=${API_KEY_OW}`)
       .then(result => {
         return result.json()
-      })
-      .then(body => {
-        console.log(body)
-        return body
       })
       .catch(err => {
         console.log(err)
         return err
       })
-      .finally(result => {
-        return console.log('Requisição Finalizada: ' + result)
+      .finally(() => {
+        return console.log('Requisição Finalizada')
       })
   
   })
 
 }
 
-function getIconWeather(iconId){
-  return fetch(`https://openweathermap.org/img/wn/${iconId}@2x.png`)
-    .then(result => {
-      return result
-    })
-    .catch(err => {
-      console.log(err)
-      return err
-    })
-}
+export { getCurrentWeather }
 
-export { getCurrentWeather, getIconWeather }
+// function getIconWeather(iconId){
+//   return fetch(`https://openweathermap.org/img/wn/${iconId}@2x.png`)
+//     .then(result => {
+//       return result
+//     })
+//     .catch(err => {
+//       console.log(err)
+//       return err
+//     })
+// }
 
 /*
 async function getCurrentWeather() {

@@ -24,7 +24,6 @@ export function elementsWeather(climaEl, result){
   const ulClimaEl = document.createElement('ul')
   ulClimaEl.classList.add('ulClima')
   divGpD.appendChild(ulClimaEl)
-
   //elementos LI da lista
   const pClimaArr = []
   for(let p = 0; p <= 3; p++){
@@ -44,6 +43,8 @@ export function elementsWeather(climaEl, result){
   pClimaArr[1].textContent = `Min: ${Math.floor(result.main.temp_min)}℃`
   pClimaArr[2].textContent = `Núvens: ${result.clouds.all}%`
   pClimaArr[3].textContent = `Clima: ${result.weather[0].description}`
+
+  climaEl.style.display = 'flex'
 
   return divGpE
   // , pCLimaEl, degressCelsius, iconClimaEl, divGpD, ulClimaEl, liClimaEl
